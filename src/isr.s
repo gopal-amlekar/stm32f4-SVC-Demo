@@ -68,7 +68,6 @@ SVC_Handler PROC
 	EXPORT  SVC_Handler
 
 ; Extract the SVC parameter
-	PUSH	{R0, R1, R2}
 	TST		LR, #4
 	MRSEQ	R0, MSP
 	MRSNE	R0, PSP

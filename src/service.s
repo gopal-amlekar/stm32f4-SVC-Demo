@@ -75,7 +75,7 @@ Service_Call_4	FUNCTION
 Service_Call_Default	FUNCTION
 	;EXPORT	Service_Call_Default	
 	LDR		R1, =GPIOD_BSRR
-	LDR		R3, =ALL_OFF
+	LDR		R3, =ALL_ON
 	STR		R3, [R1]
 	BX	LR
 	ENDFUNC
@@ -86,6 +86,7 @@ LED1		EQU	0xE0001000		;Switch on LED at PD12 and switch off PD13,PD14,PD15
 LED2		EQU	0xD0002000		;Switch on LED at PD13 and switch off PD12,PD14,PD15
 LED3		EQU	0xB0004000		;Switch on LED at PD14 and switch off PD12,PD13,PD15
 LED4		EQU	0x70008000		;Switch on LED at PD15 and switch off PD12,PD13,PD14
-ALL_OFF		EQU	0x0000F000		;Switch on all LEDs PD12 - PD15
+ALL_ON		EQU	0x0000F000		;Switch on all LEDs PD12 - PD15
+ALL_OFF		EQU	0xF0000000		;Switch off all LEDs PD12 - PD15
 	
 	END

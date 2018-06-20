@@ -123,9 +123,9 @@ If you would like to step through the SVC handler execution then '_Step_' into t
 
 ![Debug Keil Code](images/keil-h.png)
 
-When the last SVC instruction has executed, all LEDs will switch on. The last SVC number is 0xFF which causes a default service function to be called which switches on all the LEDs.
-
 ![Debug Keil Code](images/keil-i.png)
+
+When the last SVC instruction has executed, all LEDs will switch on. The last SVC number is 0xFF which causes a default service function to be called which switches on all the LEDs.
 
 Finally, the code sits in an infinite loop with the <code>B .</code>  instruction. 
 
